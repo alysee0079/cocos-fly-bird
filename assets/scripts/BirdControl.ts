@@ -6,6 +6,8 @@ export class BirdControl extends Component {
   @property
   movey: number = 8
 
+  score: number = 0
+
   start() {
     let rbody = this.getComponent(RigidBody2D)
     // rbody.applyForceToCenter(v2(20, 0), true)
@@ -14,6 +16,14 @@ export class BirdControl extends Component {
   }
   update(deltaTime: number) {}
   onBeginContact(self: CircleCollider2D, other: CircleCollider2D, contact: IPhysics2DContact) {
+    // 通过管道
+    if (other.tag === 3) {
+      this.score++
+      console.log(this.score)
+    } else {
+      // 碰到障碍
+      console.log(24)
+    }
     // 碰撞点
     // console.log(contact.getWorldManifold().points)
     // 法线

@@ -1,10 +1,10 @@
-import { _decorator, Component, Node, Vec3 } from 'cc'
+import { _decorator, Component, Node, Vec3, Collider2D, Contact2DType } from 'cc'
 const { ccclass, property } = _decorator
 
 @ccclass('PipeContorl')
 export class PipeContorl extends Component {
   @property
-  speed: number = 50
+  speed: number = 80
 
   start() {}
 
