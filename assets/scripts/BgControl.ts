@@ -21,6 +21,7 @@ export class BgControl extends Component {
   }
 
   update(deltaTime: number) {
+    // console.log(deltaTime)
     for (const node of this.node.children) {
       const x = node.getPosition().x - deltaTime * this.speed
       node.setPosition(new Vec3(x, 0))
